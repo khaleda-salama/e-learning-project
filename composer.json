@@ -1,0 +1,26 @@
+{
+    "name": "khaled/e-learningproject",
+    "authors": [
+        {
+            "name": "KhaledSalama04",
+            "email": "khaledsalama49204@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^10.49"
+    },
+    "autoload": {
+        "psr-4": {
+           "Core\\":  "Core/", 
+           "Http\\":  "Http/" 
+        }
+    },  
+    "require-dev": {
+        "pestphp/pest": "^2.36"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

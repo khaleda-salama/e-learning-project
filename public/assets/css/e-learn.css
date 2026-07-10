@@ -1,0 +1,438 @@
+:root {
+ --transition: 0.3s;
+ --main-color : #0d6efd;
+ --secound-color: #ccc;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  text-align: right;
+  margin: 0;
+}
+
+.form-signin {
+  max-width: 450px;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Start Admin Dashboard */
+
+.welcome-link {
+  align-self: center;
+}
+.welcome-message {
+  transition: var(--transition);
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.message {
+  position: fixed;
+  z-index: 1;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  padding: 8px 10px;
+  font-size: 13px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.message-exit {
+  animation: slideOut 0.6s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0px);
+  }
+}
+
+@keyframes slideOut {
+  to {
+    transform: translate(-50%, -20px);
+    opacity: 0;
+  }
+}
+
+.main-content {
+  border: 1px solid var(--secound-color);
+  height: fit-content;
+  padding: 30px 0px 20px
+}
+
+.list-item:hover {
+  transition: var(--transition);
+  background-color: #0d6efd9c  !important;
+  cursor: pointer;
+}
+.list-item:hover .list {
+  transition: var(--transition);
+  color: white;
+}
+
+.main-card::before {
+  content: '';
+  position: absolute;
+  background-color: #bca9a91c;
+  width: 0%;
+  height: 0%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: var(--transition);
+}
+.main-card:hover::before {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.student-card {
+ background-color:  #31b5f13b;
+}
+.instructor-card {
+  background-color: #9fff9f7a;
+}
+.collage-num-card {
+  background-color: #cd9afd66;
+}
+.major-num-card {
+  background-color: #ffc45969;
+}
+
+.collages-box:hover{
+  transition: var(--transition);
+  transform: translateY(-15px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.collages-box:hover .date{
+  transition: var(--transition);
+  color: #000000a9 !important;
+  font-weight: 700;
+}
+
+.collage-card,
+.major-card {
+  max-width: 500px;
+}
+
+.form {
+  max-width: 600px;
+  min-width: 400px;
+}
+
+
+.icon:hover {
+  outline: none;
+  border: none;
+}
+
+.overview {
+  min-height: 40px;
+  line-height: 1.3;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 2;  */
+  -webkit-box-orient: vertical;
+   overflow: hidden;     
+}
+
+.collage-name  {
+font-size: 14px;
+}
+
+mark {
+background-color: beige;
+}
+
+.major-card:hover mark {
+transition: var(--transition);
+background-color: #ffff99;
+
+}
+
+.major-card:hover .major-img {
+transition: var(--transition);
+transform: scale(1.05);
+}
+
+.select-label {
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.logo {
+  margin-right: 37%;
+  margin-bottom: 45px;
+}
+
+select {
+  background-color: #eeeeee8f !important;
+}
+
+.select-collage-id {
+  margin-top: -10px;
+}
+
+.table-row,
+.table-row-semster,
+.table-row-student,
+.table-row-instructor, 
+.table-row-exam {
+  cursor: pointer;
+}
+
+.table-row-semster:hover td,
+.table-row:hover td, 
+.table-row-student:hover td,
+.table-row-instructor:hover td, 
+.table-row-exam:hover td { 
+  color: #f08080; 
+}
+
+.date,
+.overview,
+.file-img {
+  margin-top: -10px;
+}
+
+.error-login,
+.error-register,
+.error-semster,
+.error-major,
+.error-course,
+.error-collage,
+.error-student,
+.error-instructor,
+.error-week,
+.error-file,
+.error-lecture, 
+.error-exam {
+  font-size: 13px;
+  margin-bottom: 10px;
+  min-height: 19px;        
+  opacity: 0;             
+  transform: translateY(-6px);
+  transition: all 0.3s ease;
+}
+
+.error-semster,
+.error-major,
+.error-collage,
+.error-name-course,
+.error-level-year,
+.error-semster-id {
+ margin-top: -10px;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* End Admin Dashboard */
+
+
+/* Start Instructor Dashboard */
+
+.my-course {
+  transition: var(--transition);
+  cursor: pointer;
+}
+.my-course:hover {
+ transform: translateY(-10px);
+}
+.my-course::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 0;
+  background-color: var(--main-color);
+  transition: var(--transition);
+}
+.my-course:hover::after {
+  width: 100%;
+}
+
+.item-course-instructor::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color);
+  bottom: -26%;
+  right: calc(-100% + 78px);
+  z-index: -1;
+  transition: var(--main-transtion);
+}
+.item-course-instructor:hover::after {
+  right: 0%;
+  z-index: 1;
+}
+.item-course-instructor:hover .link-course-instructor  { 
+  color: #000 !important; 
+  transition: var(--transition);
+}
+
+.course-week,
+.icon-drop-down {
+  cursor: pointer;
+  transition: var(--transition);
+}
+.course-week:hover {
+  transform: translateY(-5px);
+}
+.drop-down {
+  transition: var(--transition);
+  transform: rotate(-90deg);
+}
+
+.course-content {
+  transform: translateY(-6px);
+  opacity: 0;
+  max-height: 0;
+  transition: max-height 0.4s 0.1s, opacity 0.4s, transform 0.4s;
+}
+
+.content-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.plus-sign::before,
+.plus-sign::after {
+  content: '';
+  position: absolute;
+  transform: translateY(-50%) scaleX(0);
+  width: 48%;
+  height: 2px;
+  top: 50%;
+  transition: var(--transition);
+}
+.plus-sign::before {
+  left: 52%;
+ transform-origin: right;
+}
+.plus-sign::after {
+  right: 52%;
+  transform-origin: left;
+}
+
+.add-content {
+  transition: var(--transition);
+  cursor: pointer;
+  padding: 1px 7px;
+  background-color: #cccccc8c;
+}
+
+.plus-sign:hover::before, 
+.plus-sign:hover::after {
+  transform: translateY(-50%) scaleX(1);
+  background-color: var(--main-color);
+}
+
+.plus-sign:hover .add-content {
+  background-color: var(--main-color) !important;
+  color: white;
+}
+
+.small-page {
+  position: relative;
+  bottom: 350px;
+  right: 20%;
+  width: 600px;
+  height: 400px;
+  transform: translateX(-50%);
+  border: 1px solid var(--secound-color);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.closed {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 50px;
+  transition: var(--transtion);
+  background-color: #dddddd85;
+}
+.closed:hover {
+  background-color: #dc3545;
+  color: white; 
+}
+.close {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+  transition: var(--transition);
+}
+.open {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  transition: var(--transition);
+}
+
+.main-box {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+}
+
+.box {
+  border: 1px solid #dddddd85;
+  padding: 15px 25px;
+  max-width: 100%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.box:hover {
+  background-color: #dddddd26;
+  border-color: transparent;
+}
+
+.box:hover p {
+  color: black !important;
+}
+
+.file-url {
+  margin-right: 100px;
+}
+
+.student-register-majors {
+  width: fit-content;
+}
+
+/* End Instructor Dashboard */
+
+
+
+
