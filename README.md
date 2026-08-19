@@ -5,7 +5,7 @@ A multi-role Learning Management System built with **native PHP** and **MySQL**,
 
 ---
 
-## 📖 Overview
+## Overview
 
 University LMS digitizes the academic structure of a university — from faculties and majors down to individual courses, weekly content, and exams — with a dedicated, permission-based experience for Admins, Teachers, and Students.
 
@@ -13,7 +13,7 @@ University LMS digitizes the academic structure of a university — from faculti
 
 ## User Roles & Permissions
 
-### 🛠️ Admin
+### Admin
 - Create and manage **faculties** (with images & descriptions)
 - Create and manage **majors/specializations** linked to a faculty (with images & descriptions)
 - Create and manage **courses** linked to a major
@@ -29,7 +29,7 @@ University LMS digitizes the academic structure of a university — from faculti
 - Review student-submitted answer files
 - Grade submissions — grades are instantly visible to the student
 
-### 🎓 Student
+### Student
 - Access only their **enrolled courses** (no access to courses they're not registered in)
 - View weekly lectures and materials
 - View classmates enrolled in the same course
@@ -49,7 +49,7 @@ University LMS digitizes the academic structure of a university — from faculti
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 
